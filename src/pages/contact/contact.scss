@@ -7,6 +7,9 @@ page-contact {
         text-transform: capitalize;
     }
     ion-avatar:hover{
-        background-color: grey;
+        background-color:slategray;
+    }
+    ion-avatar{
+        transition: background-color 0.4s ease-in-out;
     }
 }
