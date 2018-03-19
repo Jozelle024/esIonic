@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PeopleProvider } from '../providers/people/people';
 import { HttpClientModule } from '@angular/common/http';
 import { DettaglioPersonaPage } from '../pages/dettaglio-persona/dettaglio-persona';
+import { ModalePersonaPage } from '../pages/modale-persona/modale-persona';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DettaglioPersonaPage } from '../pages/dettaglio-persona/dettaglio-perso
     HomePage,
     TabsPage,
     DetailPage,
-    DettaglioPersonaPage
+    DettaglioPersonaPage,
+    ModalePersonaPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { DettaglioPersonaPage } from '../pages/dettaglio-persona/dettaglio-perso
     HomePage,
     TabsPage,
     DetailPage,
-    DettaglioPersonaPage
+    DettaglioPersonaPage,
+    ModalePersonaPage
   ],
   providers: [
     StatusBar,

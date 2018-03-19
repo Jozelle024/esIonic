@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Result } from '../../models/persona';
 
 /**
@@ -16,12 +16,21 @@ import { Result } from '../../models/persona';
 })
 export class DettaglioPersonaPage {
   persona: Result;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public toastCtrl: ToastController) {
     this.persona = navParams.get('persona');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DettaglioPersonaPage');
+  }
+
+  mostraDob(){
+    let toast = this.toastCtrl.create({
+      message: `Date of Birth: ${this.persona.dob}`,
+      duration: 3000
+    });
+    toast.present();
   }
 
 }

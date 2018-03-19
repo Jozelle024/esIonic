@@ -7,12 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>dettaglio-persona</ion-title>
+    <ion-title>{{persona.name.first}} {{persona.name.last}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+    <ion-card>
+        <img src="{{persona.picture.large}}"/>
+        <div class="card-title">{{persona.login.username | uppercase}}</div>
+        <div class="card-subtitle">Phone: {{persona.phone}}</div>
+        <button ion-button color="danger" (click)="mostraDob()">Click me!</button>
+      </ion-card>
 </ion-content>
