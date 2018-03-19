@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PeopleProvider } from '../providers/people/people';
 import { HttpClientModule } from '@angular/common/http';
+import { DettaglioPersonaPage } from '../pages/dettaglio-persona/dettaglio-persona';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactPage,
     HomePage,
     TabsPage,
-    DetailPage
+    DetailPage,
+    DettaglioPersonaPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactPage,
     HomePage,
     TabsPage,
-    DetailPage
+    DetailPage,
+    DettaglioPersonaPage
   ],
   providers: [
     StatusBar,

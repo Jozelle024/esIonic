@@ -7,16 +7,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Call us</ion-list-header>
-    <ion-item *ngFor = "let persona of persone">
-      <ion-avatar>
-        <img src="{{persona.picture.thumbnail}}" alt="persona">
-        <h3>{{persona.name.first}} {{persona.name.last}}</h3>
-        <h3>Phone: {{persona.phone}}</h3>
-      </ion-avatar>
-      <!-- <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework -->
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-list>
+      <ion-list-header>Call us</ion-list-header>
+        <ion-item *ngFor = "let persona of persone">
+          <ion-card (click) = "dettaglioPersona(persona)">
+            <img src="{{persona.picture.large}}"/>
+            <ion-card-content>
+              <ion-card-title>
+                <h3>{{persona.name.first}} {{persona.name.last}}</h3>
+              </ion-card-title>
+              <h3>Phone: {{persona.phone}}</h3>
+            </ion-card-content>
+          </ion-card>
+          <!-- <ion-icon name="ionic" item-start></ion-icon>
+          @ionicframework -->
+        </ion-item>
+      </ion-list>
+  </ion-card>
 </ion-content>
