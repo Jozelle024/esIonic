@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Contact us</ion-list-header>
+    <ion-item *ngFor = "let persona of persone">
+      <ion-avatar>
+        <img src="{{persona.picture.thumbnail}}" alt="persona">
+        <h3>{{persona.name.first}} {{persona.name.last}}</h3>
+        <h3>Phone: {{persona.phone}}</h3>
+      </ion-avatar>
+      <!-- <ion-icon name="ionic" item-start></ion-icon>
+      @ionicframework -->
+    </ion-item>
+  </ion-list>
+</ion-content>
