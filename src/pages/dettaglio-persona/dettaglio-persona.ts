@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, ModalController } from 'ionic-angular';
 import { Result } from '../../models/persona';
+import { ModalePersonaPage } from '../modale-persona/modale-persona';
 
 /**
  * Generated class for the DettaglioPersonaPage page.
@@ -18,7 +19,8 @@ export class DettaglioPersonaPage {
   persona: Result;
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public toastCtrl: ToastController) {
+              public toastCtrl: ToastController,
+              public modalCtrl: ModalController) {
     this.persona = navParams.get('persona');
   }
 
@@ -31,6 +33,13 @@ export class DettaglioPersonaPage {
       duration: 3000
     });
     toast.present();
+  }
+  mostraModale(){
+    let modal = this.modalCtrl.create(ModalePersonaPage);
+    this.navCtrl.push(ModalePersonaPage, {
+      persona: this.persona
+    })
+    modal.present();
   }
 
 }

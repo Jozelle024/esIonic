@@ -13,7 +13,6 @@ import { Persona } from '../../models/persona';
 export class PeopleProvider {
   private url = 'https://randomuser.me/api/?results=100';
   constructor(public http: HttpClient) {
-    console.log('Hello PeopleProvider Provider');
   }
   getRandomUsers(): Observable<Persona> {
     return this.http.get<Persona>(this.url);

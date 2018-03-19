@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { Result } from '../../models/persona';
 
 /**
  * Generated class for the ModalePersonaPage page.
@@ -14,12 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'modale-persona.html',
 })
 export class ModalePersonaPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  persona: Result;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public viewCtrl: ViewController) {
+    this.persona = this.navParams.get('persona');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ModalePersonaPage');
+  }
+
+  dismissModale(){
+    this.viewCtrl.dismiss();
   }
 
 }

@@ -8,13 +8,13 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailPage } from '../pages/detail/detail';
+import { DettaglioPersonaPage } from '../pages/dettaglio-persona/dettaglio-persona';
+import { ModalePersonaPage } from '../pages/modale-persona/modale-persona';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PeopleProvider } from '../providers/people/people';
 import { HttpClientModule } from '@angular/common/http';
-import { DettaglioPersonaPage } from '../pages/dettaglio-persona/dettaglio-persona';
-import { ModalePersonaPage } from '../pages/modale-persona/modale-persona';
 
 
 @NgModule({

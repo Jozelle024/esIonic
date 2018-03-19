@@ -1,5 +1,6 @@
 <ion-header>
   <ion-navbar>
+    <a (click) = "tornaHome()">Torna Home</a>
     <ion-title>
       About
     </ion-title>
@@ -7,5 +8,20 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
 
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input [(ngModel)] = "credenziali.username" type="text" value=""></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input [(ngModel)] = "credenziali.password" type="password"></ion-input>
+    </ion-item>
+  
+    </ion-list>
+    <div padding>
+        <button  block ion-button color="warning" (click)="signIn()">Sign in</button>
+    </div>
 </ion-content>

@@ -18,6 +18,9 @@
         <img src="{{persona.picture.large}}"/>
         <div class="card-title">{{persona.login.username | uppercase}}</div>
         <div class="card-subtitle">Phone: {{persona.phone}}</div>
-        <button ion-button color="danger" (click)="mostraDob()">Click me!</button>
+        <div class="buttons">
+          <button ion-button color="danger" (click)="mostraDob()">Click me!</button>
+          <button ion-button color="warning" (click)="mostraModale()">Open modal</button>
+        </div>
       </ion-card>
 </ion-content>

@@ -1,4 +1,7 @@
 page-dettaglio-persona {
+    ion-title{
+      text-transform: capitalize;
+    }
     ion-card {
       position: relative;
       text-align: center;
@@ -21,5 +24,11 @@ page-dettaglio-persona {
       width: 100%;
       color: #fff;
       text-shadow: black 2px 2px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 }

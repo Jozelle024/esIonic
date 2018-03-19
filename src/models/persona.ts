@@ -13,7 +13,7 @@ export interface Location {
     postcode: number;
 }
 
-export interface Login {
+export class Login{
     username: string;
     password: string;
     salt: string;
