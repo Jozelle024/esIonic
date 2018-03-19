@@ -10,4 +10,9 @@
       {{ item.text }}
     </button>  
   </ion-list>
+  <div *ngIf="credenziali"> 
+      <p>Username: {{credenziali.username}}</p>
+      <p>Password: {{credenziali.password}}</p>
+  </div>
+ 
 </ion-content>
